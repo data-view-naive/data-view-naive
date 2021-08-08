@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Data View Naive</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/demo/assets/images/naivelogo.svg"
+    />
+  </head>
+  <body>
+    <script>
+      const path = window.location.pathname
+      const pathLocale = path.startsWith('/en-US')
+        ? 'en-US'
+        : path.startsWith('/zh-CN')
+        ? 'zh-CN'
+        : undefined
+      function deriveTitleFromLocale(locale = navigator.language) {
+        if (locale === 'zh-CN') {
+          document.title = 'Data View Naive: 一个 Vue 3 可视化大屏组件库'
+        } else {
+          document.title = 'Data View Naive: A Vue 3 Component Library'
+        }
+      }
+      deriveTitleFromLocale(pathLocale)
+    </script>
+    <div id="app"></div>
+    <script type="module" src="__INDEX__"></script>
+  </body>
+</html>
