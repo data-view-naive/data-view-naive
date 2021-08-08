@@ -78,9 +78,16 @@ export const enComponentRoutes = [
 ]
 
 export const zhComponentRoutes = [
+  // components
   {
     path: 'hello',
     component: () => import('../../src/hello/demos/zhCN/index.demo-entry.md')
+  },
+
+  // debug
+  {
+    path: 'test01',
+    component: () => import('../../src/debug/test01/demos/zhCN/index.demo-entry.md')
   }
 ]
 

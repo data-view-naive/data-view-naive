@@ -134,7 +134,14 @@ export function createComponentMenuOptions ({ lang, theme, mode }) {
     ...createDebugDemos(
       {
         en: '--Debug',
-        children: []
+        children: [
+          {
+            en: '',
+            zh: 'Test01',
+            enSuffix: true,
+            path: '/test01'
+          }
+        ]
       },
       mode
     )
