@@ -5,3 +5,4 @@
  */
 
 export { default as NTest01 } from './src/Test01'
+export { default as NTest02 } from './src/Test02'
