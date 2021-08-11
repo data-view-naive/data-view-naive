@@ -128,6 +128,12 @@ export function createComponentMenuOptions ({ lang, theme, mode }) {
           zh: '你好',
           enSuffix: true,
           path: '/hello'
+        },
+        {
+          en: 'Icon',
+          zh: '图标',
+          enSuffix: true,
+          path: '/icon'
         }
       ]
     }),

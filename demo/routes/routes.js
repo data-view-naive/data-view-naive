@@ -83,11 +83,16 @@ export const zhComponentRoutes = [
     path: 'hello',
     component: () => import('../../src/hello/demos/zhCN/index.demo-entry.md')
   },
+  {
+    path: 'icon',
+    component: () => import('../../src/icon/demos/zhCN/index.demo-entry.md')
+  },
 
   // debug
   {
     path: 'test01',
-    component: () => import('../../src/debug/test01/demos/zhCN/index.demo-entry.md')
+    component: () =>
+      import('../../src/debug/test01/demos/zhCN/index.demo-entry.md')
   }
 ]
 
