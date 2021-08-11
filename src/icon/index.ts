@@ -4,4 +4,4 @@
  * @Description:
  */
 
-export { default as VIcon } from './src/Icon'
+export { default as DIcon } from './src/Icon'

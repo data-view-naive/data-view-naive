@@ -1,5 +1,5 @@
 # 基础
 
 ```html
-<v-hello> </v-hello>
+<d-icon> </d-icon>
 ```

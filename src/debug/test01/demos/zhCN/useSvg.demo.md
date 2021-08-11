@@ -1,6 +1,5 @@
-# svg组件
+# svg 组件
 
 ```html
-<n-useSvg>
-</n-useSvg>
+<d-useSvg> </d-useSvg>
 ```

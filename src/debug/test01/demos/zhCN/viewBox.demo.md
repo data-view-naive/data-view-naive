@@ -3,6 +3,5 @@
 #### viewPort 宽高比相同
 
 ```html
-<n-test02>
-</n-test02>
+<d-test02> </d-test02>
 ```

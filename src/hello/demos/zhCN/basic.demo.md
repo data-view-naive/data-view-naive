@@ -1,6 +1,5 @@
 # 基础
 
 ```html
-<n-hello>
-</n-hello>
+<d-hello> </d-hello>
 ```
