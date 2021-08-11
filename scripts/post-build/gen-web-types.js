@@ -28,7 +28,7 @@ exports.genWebTypes = function genWebTypes () {
   const ignoredPropNames = ['theme', 'themeOverrides', 'builtinThemeOverrides']
 
   Object.entries(components).forEach(([exportName, component]) => {
-    if (exportName[0] !== 'N') return
+    if (exportName[0] !== 'V') return
     if (exportName.startsWith('Nx')) return
     if (exportName === 'NScrollbar') return
     const { props } = component

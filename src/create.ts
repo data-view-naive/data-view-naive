@@ -15,7 +15,7 @@ interface NUiCreateOptions {
 }
 
 function create ({
-  componentPrefix = 'N',
+  componentPrefix = 'V',
   components = []
 }: NUiCreateOptions = {}): NUiInstance {
   const installTargets: App[] = []
