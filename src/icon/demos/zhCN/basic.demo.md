@@ -1,5 +1,5 @@
 # 基础
 
 ```html
-<d-icon> </d-icon>
+<d-icon name="check-circle" style="font-size: 30px;color: red;"> </d-icon>
 ```
