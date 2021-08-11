@@ -136,8 +136,8 @@ export function createComponentMenuOptions ({ lang, theme, mode }) {
         en: '--Debug',
         children: [
           {
-            en: '',
-            zh: 'Test01',
+            en: 'svg',
+            zh: 'Svg',
             enSuffix: true,
             path: '/test01'
           }

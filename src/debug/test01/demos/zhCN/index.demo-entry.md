@@ -5,4 +5,6 @@
 ```demo
 basic
 viewBox
+preserveAspectRatio
+useSvg
 ```

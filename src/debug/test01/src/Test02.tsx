@@ -4,7 +4,6 @@
  * @Description:
  */
 import { defineComponent, h } from 'vue'
-import { NP, NH3 } from 'naive-ui'
 
 const Test02 = defineComponent({
   name: 'Test02',
@@ -14,74 +13,9 @@ const Test02 = defineComponent({
   },
   render () {
     return (
-      <div>
-        <NH3>
-          {() => '宽高比相同'}
-        </NH3>
-        <NP>
-          {() => (
-            <svg width="500" height="200" style="border: 1px solid #000000">
-              <rect x="200" y="100" width="100" height="50" stroke-width="10" style="stroke: #000000; fill:none;"/>
-            </svg>
-          )}
-        </NP>
-        <NH3>
-          {() => '宽高比不相同'}
-        </NH3>
-        <NP>
-          {() => 'preserveAspectRatio: xMidYMid meet'}
-        </NP>
-        <NP>
-          {() => (
-            <svg
-              width="500"
-              height="200"
-              viewBox="0 0 200 200"
-              style="border: 1px solid #000000"
-              preserveAspectRatio="xMidYMid meet"
-            >
-              <rect
-                x="100"
-                y="100"
-                width="100"
-                height="50"
-                stroke-width="10"
-                style="stroke: #000000; fill:none;"
-              />
-            </svg>
-          )}
-        </NP>
-        <NP>
-          {() => 'preserveAspectRatio: xMaxYMin meet'}
-        </NP>
-        <NP>
-          {() => (
-            <svg width="500" height="200" viewBox="0 0 200 200" style="border: 1px solid #000000" preserveAspectRatio="xMaxYMin meet">
-              <rect x="100" y="100" width="100" height="50" stroke-width="10" style="stroke: #000000; fill:none;"/>
-            </svg>
-          )}
-        </NP>
-        <NP>
-          {() => 'preserveAspectRatio: xMidYMax slice'}
-        </NP>
-        <NP>
-          {() => (
-            <svg width="500" height="200" viewBox="0 0 200 200" style="border: 1px solid #000000" preserveAspectRatio="xMidYMax slice">
-              <rect x="100" y="100" width="100" height="50" stroke-width="10" style="stroke: #000000; fill:none;"/>
-            </svg>
-          )}
-        </NP>
-        <NP>
-          {() => 'preserveAspectRatio: xMaxYMin slice'}
-        </NP>
-        <NP>
-          {() => (
-            <svg width="500" height="200" viewBox="0 0 200 200" style="border: 1px solid #000000" preserveAspectRatio="xMaxYMin slice">
-              <rect x="100" y="100" width="100" height="50" stroke-width="10" style="stroke: #000000; fill:none;"/>
-            </svg>
-          )}
-        </NP>
-      </div>
+      <svg width="500" height="200" style="border: 1px solid #000000">
+        <rect x="200" y="100" width="100" height="50" stroke-width="10" style="stroke: #000000; fill:none;"/>
+      </svg>
     )
   }
 })
