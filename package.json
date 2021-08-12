@@ -135,6 +135,11 @@
     "vueuc": "^0.4.9"
   },
   "sideEffects": false,
+  "homepage": "https://github.com/data-view-naive/data-view-naive",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/data-view-naive/data-view-naive"
+  },
   "keywords": [
     "component library",
     "ui framework",
