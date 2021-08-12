@@ -20,6 +20,5 @@ export {
   largerSize,
   getTitleAttribute
 } from './naive'
-export type { ExtractPublicPropTypes, ExtractInternalPropTypes } from './naive'
 export { formatLength } from './css'
 export { createKey } from './cssr'
