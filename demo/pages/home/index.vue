@@ -10,7 +10,7 @@
         <span
           @mouseenter="handleTitleMouseEnter"
           @mouseleave="handleTitleMouseLeave"
-          >
+        >
           Data view
         </span>
       </n-h1>
@@ -50,9 +50,7 @@
       </div>
       <left-image class="left-image" />
     </div>
-    <n-layout-footer>
-      <landing-footer centered />
-    </n-layout-footer>
+    <n-layout-footer> footer </n-layout-footer>
   </n-layout>
 </template>
 

@@ -6,7 +6,7 @@
 
 import { cE, cB } from '../../../_utils/cssr'
 
-cB('icon', `
+export default cB('base', `
   display: inline-block;
 `, [
   cE(
@@ -19,4 +19,4 @@ cB('icon', `
       overflow: hidden;
     `
   )
-]).mount()
+])
