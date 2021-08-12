@@ -172,6 +172,7 @@ async function convertMd2ComponentDocumentation (
     })
   }
   // resolve demos, debug demos are removed from production build
+  // 从markdown中解析演示示例
   const demosIndex = tokens.findIndex(
     (token) => token.type === 'code' && token.lang === 'demo'
   )

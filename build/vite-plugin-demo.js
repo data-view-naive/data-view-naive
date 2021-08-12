@@ -1,3 +1,10 @@
+/**
+ * @author 成雨
+ * @date 2021/8/13
+ * @Description: vite 插件
+ * 将markdown转换成vue组件
+ */
+
 const createVuePlugin = require('@vitejs/plugin-vue')
 const getTransformedVueSrc = require('./utils/get-demo-by-path')
 const createCssrPlugin = require('./vite-plugin-css-render')

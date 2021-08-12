@@ -2,10 +2,12 @@
 // const marked = require('marked')
 const fs = require('fs')
 const path = require('path')
-const content = fs.readFileSync(path.resolve(__dirname, '../../../CHANGELOG.zh-CN.md')).toString()
+const content = fs
+  .readFileSync(path.resolve(__dirname, '../../../CHANGELOG.zh-CN.md'))
+  .toString()
 // console.log('rendered', mdLoader(content))
 
-const mdLoader = require('../NaiveUIMdLoader')
+const mdLoader = require('../md-renderer')
 
 // function parseMdAsAnchor (content) {
 //   const tokens = marked.lexer(content)
@@ -17,4 +19,6 @@ const mdLoader = require('../NaiveUIMdLoader')
 //   return `<n-anchor :top="32" position="absolute" affix style="width: 132px;">${linkTags.join('\n')}</n-anchor>`
 // }
 
+console.log(mdLoader.call({ resourcePath: 'xxx' }, content, 'xxx'))
+console.log(mdLoader.call({ resourcePath: 'xxx' }, content, 'xxx').hr())
 console.log(mdLoader.call({ resourcePath: 'xxx' }, content, 'xxx'))
