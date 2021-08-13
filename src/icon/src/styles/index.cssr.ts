@@ -4,12 +4,12 @@
  * @Description:
  */
 
-import { cE, cB } from '../../../_utils/cssr'
+import { c, cB } from '../../../_utils/cssr'
 
-export default cB('base', `
+export default cB('icon', `
   display: inline-block;
 `, [
-  cE(
+  c(
     'svg',
     `
       width: 1em;
