@@ -142,10 +142,28 @@ export function createComponentMenuOptions ({ lang, theme, mode }) {
         en: '--Debug',
         children: [
           {
-            en: 'svg',
-            zh: 'Svg',
+            en: 'test01',
+            zh: 'test01',
             enSuffix: true,
             path: '/test01'
+          },
+          {
+            en: 'test02',
+            zh: 'test02',
+            enSuffix: true,
+            path: '/test02'
+          },
+          {
+            en: 'useSvg',
+            zh: 'useSvg',
+            enSuffix: true,
+            path: '/useSvg'
+          },
+          {
+            en: 'viewBox',
+            zh: 'viewBox',
+            enSuffix: true,
+            path: '/viewBox'
           }
         ]
       },

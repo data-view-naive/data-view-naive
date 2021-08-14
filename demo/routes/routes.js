@@ -91,8 +91,19 @@ export const zhComponentRoutes = [
   // debug
   {
     path: 'test01',
-    component: () =>
-      import('../../src/debug/test01/demos/zhCN/index.demo-entry.md')
+    component: () => import('../debug-pages/Test01')
+  },
+  {
+    path: 'test02',
+    component: () => import('../debug-pages/Test02')
+  },
+  {
+    path: 'useSvg',
+    component: () => import('../debug-pages/UseSvg')
+  },
+  {
+    path: 'viewBox',
+    component: () => import('../debug-pages/PreserveAspectRatio')
   }
 ]
 
