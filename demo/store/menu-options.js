@@ -177,6 +177,12 @@ export function createComponentMenuOptions ({ lang, theme, mode }) {
             zh: 'viewBox',
             enSuffix: true,
             path: '/viewBox'
+          },
+          {
+            en: 'svgAnimation',
+            zh: 'svgAnimation',
+            enSuffix: true,
+            path: '/svgAnimation'
           }
         ]
       },

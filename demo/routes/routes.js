@@ -109,6 +109,10 @@ export const zhComponentRoutes = [
   {
     path: 'viewBox',
     component: () => import('../debug-pages/PreserveAspectRatio')
+  },
+  {
+    path: 'svgAnimation',
+    component: () => import('../debug-pages/svg-animation.vue')
   }
 ]
 
