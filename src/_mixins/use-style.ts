@@ -22,12 +22,12 @@ export default function useStyle (
       props: {
         bPrefix: clsPrefix ? `.${clsPrefix}-` : undefined
       },
-      ssr: ssrAdapter
+      ssr: ssrAdapter?.context ? ssrAdapter : undefined
     })
     globalStyle.mount({
-      id: 'naive-ui/global',
+      id: 'data-view-naive/global',
       head: true,
-      ssr: ssrAdapter
+      ssr: ssrAdapter?.context ? ssrAdapter : undefined
     })
   }
   if (ssrAdapter) {

@@ -137,6 +137,19 @@ export function createComponentMenuOptions ({ lang, theme, mode }) {
         }
       ]
     }),
+    appendCounts({
+      zh: '配置组件',
+      en: 'Config Components',
+      type: 'group',
+      children: [
+        {
+          en: 'Config Provider',
+          zh: '全局化配置',
+          enSuffix: true,
+          path: '/config-provider'
+        }
+      ]
+    }),
     ...createDebugDemos(
       {
         en: '--Debug',

@@ -87,6 +87,11 @@ export const zhComponentRoutes = [
     path: 'icon',
     component: () => import('../../src/icon/demos/zhCN/index.demo-entry.md')
   },
+  {
+    path: 'config-provider',
+    component: () =>
+      import('../../src/config-provider/demos/zhCN/index.demo-entry.md')
+  },
 
   // debug
   {
