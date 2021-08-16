@@ -3,7 +3,7 @@ import { getParameters } from 'codesandbox/lib/api/define'
 const indexHtml = `<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Naive UI Demo</title>
+    <title>Data View Naive Demo</title>
     <style>
       body {
         padding: 24px;
@@ -17,15 +17,7 @@ const indexHtml = `<!DOCTYPE html>
 `
 
 const appVue = `<template>
-<n-loading-bar-provider>
-  <n-message-provider>
-    <n-notification-provider>
-      <n-dialog-provider>
-        <demo />
-      </n-dialog-provider>
-    </n-notification-provider>
-  </n-message-provider>
-</n-loading-bar-provider>
+  <demo />
 </template>
 
 <script>
@@ -40,12 +32,12 @@ components: {
 </script>`
 
 const mainJs = `import { createApp } from "vue";
-import naive from "naive-ui";
+import dataViewNaive from "data-view-naive";
 import App from "./App.vue";
 
 const app = createApp(App);
 
-app.use(naive);
+app.use(dataViewNaive);
 
 app.mount("#app");
 `
@@ -68,7 +60,7 @@ export function getCodeSandboxParams (code) {
             ...getDeps(code),
             vue: 'next',
             'vue-router': 'next',
-            'naive-ui': 'latest'
+            'data-view-naive': 'latest'
           },
           devDependencies: {
             '@vue/cli-plugin-babel': '~4.5.0'
