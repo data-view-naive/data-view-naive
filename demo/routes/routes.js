@@ -92,6 +92,10 @@ export const zhComponentRoutes = [
     component: () =>
       import('../../src/config-provider/demos/zhCN/index.demo-entry.md')
   },
+  {
+    path: 'loading',
+    component: () => import('../../src/loading/demos/zhCN/index.demo-entry.md')
+  },
 
   // debug
   {

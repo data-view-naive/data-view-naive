@@ -134,6 +134,12 @@ export function createComponentMenuOptions ({ lang, theme, mode }) {
           zh: '图标',
           enSuffix: true,
           path: '/icon'
+        },
+        {
+          en: 'Loading',
+          zh: '加载',
+          enSuffix: true,
+          path: '/loading'
         }
       ]
     }),
