@@ -53,7 +53,6 @@ export default defineComponent({
             originalWidth.value = window.screen.width
             originalHeight.value = window.screen.height
           }
-          // console.log(width.value, height.value, originalWidth.value, originalHeight.value)
         }
       })
       return true
