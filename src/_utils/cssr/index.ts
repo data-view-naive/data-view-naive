@@ -13,6 +13,7 @@ const elementPrefix = '__'
 const modifierPrefix = '--'
 
 const cssr = CSSRender()
+// css编写采用BEM命名规范
 const plugin = BEMPlugin({
   blockPrefix: prefix,
   elementPrefix,
