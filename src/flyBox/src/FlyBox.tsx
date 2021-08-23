@@ -36,7 +36,7 @@ const FlyBox = defineComponent({
     const dFlyBoxRef = ref<HTMLDivElement | null>(null)
     const width = ref(0)
     const height = ref(0)
-    const refName = 'dFlyBox'
+    const refName = 'd-fly-box'
     const pathId = `${refName}-path-${uuid}`
     const radialGradientId = `${refName}-gradient-${uuid}`
     const maskId = `${refName}-mask-${uuid}`
@@ -78,6 +78,7 @@ const FlyBox = defineComponent({
       maskId,
       duration,
       lineColor,
+      starColor,
       starLength,
       radialGradientId,
       mergedClsPrefixRef,
@@ -112,7 +113,7 @@ const FlyBox = defineComponent({
                   rotate="auto"
                   repeatCount="indefinite"
                 >
-                  <mpath href={path} />
+                  <mpath href={`#${pathId}`} />
                 </animateMotion>
               </circle>
             </mask>
@@ -121,11 +122,11 @@ const FlyBox = defineComponent({
           <use
             href={`#${pathId}`}
             stroke-width="3"
-            stroke="starColor"
+            stroke={starColor}
             mask={`url(#${maskId})`}
           />
         </svg>
-        <div class={`${mergedClsPrefixRef}-flyBox--content`}>{$slots}</div>
+        <div class={`${mergedClsPrefixRef}-flyBox__content`}>{$slots}</div>
       </div>
     )
   }

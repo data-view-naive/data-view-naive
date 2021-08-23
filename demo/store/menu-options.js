@@ -140,6 +140,12 @@ export function createComponentMenuOptions ({ lang, theme, mode }) {
           zh: '加载',
           enSuffix: true,
           path: '/loading'
+        },
+        {
+          en: 'FlyBox',
+          zh: 'flyBox',
+          enSuffix: true,
+          path: '/flyBox'
         }
       ]
     }),

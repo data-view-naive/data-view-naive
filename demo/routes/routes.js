@@ -96,6 +96,10 @@ export const zhComponentRoutes = [
     path: 'loading',
     component: () => import('../../src/loading/demos/zhCN/index.demo-entry.md')
   },
+  {
+    path: 'flyBox',
+    component: () => import('../../src/flyBox/demos/zhCN/index.demo-entry.md')
+  },
 
   // debug
   {
