@@ -143,7 +143,7 @@ export function createComponentMenuOptions ({ lang, theme, mode }) {
         },
         {
           en: 'FlyBox',
-          zh: 'flyBox',
+          zh: '流星',
           enSuffix: true,
           path: '/flyBox'
         }
