@@ -1,5 +1,12 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      reuseNode true
+      registryUrl 'https://coding-public-docker.pkg.coding.net'
+      image 'public/docker/nodejs:12'
+      args '-v /etc/hosts:/etc/hosts'
+    }
+  }
   stages {
     stage('从代码仓库拉取代码') {
       steps {
