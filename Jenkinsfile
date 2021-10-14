@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('从代码仓库拉取代码') {
+    stage('检出代码') {
       steps {
         checkout([
           $class: 'GitSCM',
@@ -15,18 +15,15 @@ pipeline {
     }
     stage('构建') {
       steps {
-        echo '构建中...'
-        sh 'pwd'
-        sh 'npm install'
-        sh 'release:site'
-        sh 'cd site && tar -zcvf ~/workspace/data-view-naive.tar.gz .'
+        echo '构建中....'
+        sh 'cd src && tar -zcvf /tmp/www.tar.gz .'
         echo '构建完成...'
       }
     }
     stage('部署') {
       steps {
-        echo '部署中...'
         script {
+          echo 'hello CODING'
           def remote = [:]
           remote.name = 'coding'
           remote.allowAnyHosts = true
@@ -40,19 +37,16 @@ pipeline {
             remote.identityFile = id_rsa
 
             // SSH 上传文件到远端服务器
-            sshPut remote: remote, from: 'data-view-naive.tar.gz', into: '/tmp/'
+            sshPut remote: remote, from: '/tmp/www.tar.gz', into: '/tmp/'
 
             // 解压
-            sshCommand remote: remote, command: "rm -rf /tmp/data-view-naive"
-            sshCommand remote: remote, command: "mkdir -p /tmp/data-view-naive"
-            sshCommand remote: remote, command: "tar -zxvf /tmp/data-view-naive.tar.gz -C /tmp/data-view-naive"
+            sshCommand remote: remote, command: "rm -rf /tmp/www"
+            sshCommand remote: remote, command: "mkdir -p /tmp/www"
+            sshCommand remote: remote, command: "tar -zxvf /tmp/www.tar.gz -C /tmp/www"
             sshCommand remote: remote, command: "mkdir -p ~/www"
-            sshCommand remote: remote, command: "rm -rf ~/www/data-view-naive"
-            sshCommand remote: remote, command: "mkdir -p ~/www/data-view-naive"
-            sshCommand remote: remote, command: "cp -rp -p /tmp/data-view-naive/* ~/www/data-view-naive"
+            sshCommand remote: remote, command: "cp -rp -p /tmp/www/* ~/www"
           }
         }
       }
     }
   }
-}
