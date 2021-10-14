@@ -11,7 +11,7 @@
     "build:site": "./scripts/pre-build-site/pre-build-site.sh && cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=4096 vite build && ./scripts/post-build-site/post-build-site.sh",
     "clean": "rimraf site lib es node_modules/data-view-naive themes/**/es themes/**/lib",
     "release:package": "npm run test && npm run build:package && npm publish",
-    "release:site": "cross-env TUSIMPLE=true npm run build:site && node build-doc/generate-deploy-sh.js && sudo bash build-doc/deploy-doc.sh",
+    "release:site": "cross-env TUSIMPLE=true npm run build:site",
     "lint": "npm run lint:code && npm run lint:type",
     "lint:type": "tsc -b --force tsconfig.esm.json",
     "lint:code": "eslint --fix \"{src,build,scripts,demo}/**/*.{ts,tsx,js,vue,md}\"",
