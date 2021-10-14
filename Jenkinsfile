@@ -19,7 +19,7 @@ pipeline {
         sh 'pwd'
         sh 'npm install'
         sh 'release:site'
-        sh 'cd dist && tar -zcvf ~/workspace/data-view-naive.tar.gz .'
+        sh 'cd site && tar -zcvf ~/workspace/data-view-naive.tar.gz .'
         echo '构建完成...'
       }
     }
