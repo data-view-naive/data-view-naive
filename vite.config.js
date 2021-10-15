@@ -6,6 +6,7 @@ const createDemoPlugin = require('./build/vite-plugin-demo')
  * @type {import('vite').UserConfig}
  */
 module.exports = {
+  base: './',
   root: __dirname,
   plugins: createDemoPlugin(),
   resolve: {
