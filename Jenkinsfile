@@ -1,16 +1,18 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      reuseNode true
+      registryUrl 'https://coding-public-docker.pkg.coding.net'
+      image 'public/docker/nodejs:12'
+      args '-v /etc/hosts:/etc/hosts'
+    }
+
+  }
   stages {
-    stage('从代码仓库拉取代码') {
+    stage('检出') {
       steps {
-        checkout([
-          $class: 'GitSCM',
-          branches: [[name: env.GIT_BUILD_REF]],
-          userRemoteConfigs: [[
-            url: env.GIT_REPO_URL,
-            credentialsId: env.CREDENTIALS_ID
-          ]]])
-        }
+        checkout([$class: 'GitSCM', branches: [[name: env.GIT_BUILD_REF]],
+        userRemoteConfigs: [[url: env.GIT_REPO_URL, credentialsId: env.CREDENTIALS_ID]]])
       }
     }
     stage('构建') {
@@ -18,9 +20,9 @@ pipeline {
         echo '构建中...'
         sh 'pwd'
         sh 'npm install'
-        sh 'release:site'
+        sh 'npm run release:site'
         sh 'cd site && tar -zcvf ~/workspace/data-view-naive.tar.gz .'
-        echo '构建完成...'
+        echo '构建完成.'
       }
     }
     stage('部署') {
@@ -52,6 +54,7 @@ pipeline {
             sshCommand remote: remote, command: "cp -rp -p /tmp/data-view-naive/* ~/www/data-view-naive"
           }
         }
+
       }
     }
   }
